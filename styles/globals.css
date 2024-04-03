@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
+*/
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.main:before {
+  background: radial-gradient(circle, rgba(104, 97, 236, 0) 0, #0e0d0d8d 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -5;
+}
+
+
+
+
+.gradient {
+    width: 100%;
+    z-index: 0;
+  /* Fondo morado */
+  background: linear-gradient(to right, #010101, #2e0871);
+  /* Animación para mover el color más claro */
+  animation: moveLighterColor 3s infinite alternate; /* Mueve el color más claro durante 3 segundos en una dirección y luego en la opuesta */
+}
+
+/* Definición de la animación */
+@keyframes moveLighterColor {
+  0% {
+    background: linear-gradient(to right,  #010101, #420aa3); /* Comienza con el gradiente normal */
+  }
+  50% {
+    background: linear-gradient(to right, #1A0631, #170439); /* Gradiente con el color más claro moviéndose hacia el medio */
+  }
+  100% {
+    background: linear-gradient(to right,  #010101, #2e0871); /* Vuelve al gradiente normal */
+  }
+}
+
+
+.app {
+ padding-top: 15px;
+  z-index: 3;
+}
+
+input{
+  border-width: 1px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-color: #420aa3;
+  background-color: transparent;
+
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+    background-color: transparent;
+    appearance: none;
+    border: 1px solid #4e0681;
+    border-radius: 30%;
+}
+
+/* Estilo del contenedor del checkbox */
+input[type="checkbox"]:checked {
+  background-color: rgb(236 72 153);
+}
+
+
+
+
+
+
+textarea{
+  border-width: 1px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-color: #420aa3;
+  background-color: transparent;
+
+}
